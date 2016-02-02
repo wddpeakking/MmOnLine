@@ -2,12 +2,12 @@
 #define _Manm_Sigle_H_
 
 template <class T>
-class CSingleInstace
+class CSingleton
 {
 public:
-	CSingleInstace(){};
-	~CSingleInstace(){};
-	T* GetInstance()
+	CSingleton(){};
+	~CSingleton(){};
+	static T* GetInstance()
 	{
 		if(g_Instace == NULL)
 		{
@@ -18,8 +18,8 @@ public:
 private:
 	static T* g_Instace;
 
-}
+};
 
 template<class T> 
-CSingleInstace<T> CSingleInstace::g_Instance = NULL;
+CSingleton<T> CSingleton<T>::g_Instace = NULL;
 #endif

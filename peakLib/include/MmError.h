@@ -1,6 +1,5 @@
 #ifndef _Manm_Error_
 #define _Manm_Error_
-
 #include "Mmsingle.h"
 
 class CMmError : public CSingleton<CMmError>

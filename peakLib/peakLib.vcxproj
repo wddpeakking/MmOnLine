@@ -18,6 +18,7 @@
     <ClInclude Include="include\MmError.h" />
     <ClInclude Include="include\Mmsingle.h" />
     <ClInclude Include="include\MmThread.h" />
+    <ClInclude Include="include\MmTypedef.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CF8BC6B0-2F46-413E-952C-E6FA906BCF83}</ProjectGuid>

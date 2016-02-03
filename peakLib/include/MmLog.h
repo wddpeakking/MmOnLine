@@ -28,4 +28,15 @@ private:
 	FILE* m_fp;				//日志文件
 	LogLevel m_enLevel;		//日志级别
 };
+
+#define LogTraceMsg(msg,...)\
+	CLog::GetInstance()->LogTrace(__FILE__, __LINE__, __FUNCTION__, NULL, msg, ##__VA_ARGS__);
+#define LogDebugMsg(msg,...)\
+	CLog::GetInstance()->LogDebug(__FILE__, __LINE__, __FUNCTION__, NULL, msg, ##__VA_ARGS__);
+#define LogInfoMsg(msg,...)\
+	CLog::GetInstance()->LogInfo(__FILE__, __LINE__, __FUNCTION__, NULL, msg, ##__VA_ARGS__);
+#define LogWarningMsg(msg,...)\
+	CLog::GetInstance()->LogWarning(__FILE__, __LINE__, __FUNCTION__, NULL, msg, ##__VA_ARGS__);
+#define LogErrorMsg(msg,...)\
+	CLog::GetInstance()->LogError(__FILE__, __LINE__, __FUNCTION__, NULL, msg, ##__VA_ARGS__);
 #endif

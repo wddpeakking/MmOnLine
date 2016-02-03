@@ -21,5 +21,5 @@ private:
 };
 
 template<class T> 
-CSingleton<T> CSingleton<T>::g_Instace = NULL;
+T* CSingleton<T>::g_Instace = NULL;
 #endif

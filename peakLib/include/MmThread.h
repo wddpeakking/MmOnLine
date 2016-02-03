@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _Manm_Thread_H_
+#define _Manm_Thread_H_
+
 class CMmThread
 {
 public:
@@ -6,3 +8,4 @@ public:
 	~CMmThread(void);
 };
 
+#endif

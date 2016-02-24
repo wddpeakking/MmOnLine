@@ -30,13 +30,13 @@ private:
 };
 
 #define LogTraceMsg(msg,...)\
-	CLog::GetInstance()->LogTrace(__FILE__, __LINE__, __FUNCTION__, NULL, msg, ##__VA_ARGS__);
+	CLog::GetInstance()->LogTrace(msg);
 #define LogDebugMsg(msg,...)\
-	CLog::GetInstance()->LogDebug(__FILE__, __LINE__, __FUNCTION__, NULL, msg, ##__VA_ARGS__);
+	CLog::GetInstance()->LogDebug(msg);
 #define LogInfoMsg(msg,...)\
-	CLog::GetInstance()->LogInfo(__FILE__, __LINE__, __FUNCTION__, NULL, msg, ##__VA_ARGS__);
+	CLog::GetInstance()->LogInfo(msg);
 #define LogWarningMsg(msg,...)\
-	CLog::GetInstance()->LogWarning(__FILE__, __LINE__, __FUNCTION__, NULL, msg, ##__VA_ARGS__);
+	CLog::GetInstance()->LogWarning(msg);
 #define LogErrorMsg(msg,...)\
-	CLog::GetInstance()->LogError(__FILE__, __LINE__, __FUNCTION__, NULL, msg, ##__VA_ARGS__);
+	CLog::GetInstance()->LogError(msg);
 #endif

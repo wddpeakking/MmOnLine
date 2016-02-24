@@ -21,6 +21,7 @@
     <ClInclude Include="include\Mmsingle.h" />
     <ClInclude Include="include\MmThread.h" />
     <ClInclude Include="include\MmTypedef.h" />
+    <ClInclude Include="include\Mmmutex.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CF8BC6B0-2F46-413E-952C-E6FA906BCF83}</ProjectGuid>
@@ -51,6 +52,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(ProjectName)\lib\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

@@ -10,8 +10,8 @@ public:
 
 	enum Error_Code
 	{
-		en_OK,
 		en_False,
+		en_OK,
 	};
 };
 

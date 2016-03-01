@@ -5,6 +5,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "peakLib", "peakLib\peakLib.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ManmOnLine", "ManmOnLine\ManmOnLine.vcxproj", "{713592C9-4C75-4205-87F5-59F2076F2FAE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{8049E081-86A2-41BB-BF3A-16F8B0B3C902}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF8BC6B0-2F46-413E-952C-E6FA906BCF83} = {CF8BC6B0-2F46-413E-952C-E6FA906BCF83}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +24,10 @@ Global
 		{713592C9-4C75-4205-87F5-59F2076F2FAE}.Debug|Win32.Build.0 = Debug|Win32
 		{713592C9-4C75-4205-87F5-59F2076F2FAE}.Release|Win32.ActiveCfg = Release|Win32
 		{713592C9-4C75-4205-87F5-59F2076F2FAE}.Release|Win32.Build.0 = Release|Win32
+		{8049E081-86A2-41BB-BF3A-16F8B0B3C902}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8049E081-86A2-41BB-BF3A-16F8B0B3C902}.Debug|Win32.Build.0 = Debug|Win32
+		{8049E081-86A2-41BB-BF3A-16F8B0B3C902}.Release|Win32.ActiveCfg = Release|Win32
+		{8049E081-86A2-41BB-BF3A-16F8B0B3C902}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

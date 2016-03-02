@@ -11,8 +11,8 @@ extern "C"
 #include "libavutil/time.h"  
 };  
 
-#define USE_H264BSF 0  
-int main(int argc,char** argv)
+
+int Testffmpeg()
 {
 	AVOutputFormat *ofmt = NULL;  
 	//Input AVFormatContext and Output AVFormatContext  
@@ -147,6 +147,47 @@ end:
 			printf( "Error occurred.\n");  
 			return -1;  
 		}  
+}
+
+
+#include "cv.h"
+#include "highgui/highgui.hpp"
+
+//从摄像头获取图片
+IplImage* GetImageByCamera(int nIndex)
+{
+	CvCapture* pCapture = cvCreateCameraCapture( nIndex );
+	if (pCapture != NULL)
+	{
+		return cvQueryFrame( pCapture );
+	}
+	return NULL;
+}
+
+
+
+#define USE_H264BSF 0  
+int main(int argc,char** argv)
+{
+	/*CvVideoWriter* pWriter = cvCreateVideoWriter( "test.h264", CV_FOURCC('h','2','6','4'),20, cvSize(800,600));
+	if (pWriter!=NULL)
+	{*/
+		int nFrame = 0;
+		while (1)
+		{
+			IplImage* pImage = GetImageByCamera(-1);
+			if (pImage != NULL)
+			{
+				//int nRet = cvWriteFrame( pWriter, pImage );
+				std::cout<<"\tcurrent =nFrame "<<std::endl;
+				nFrame++;
+				cvShowImage("Video Capture",pImage);  
+			}
+		}
+	//}
+	//cvReleaseVideoWriter( &pWriter );
+
+	
 	return 0;
 
 

@@ -14,14 +14,17 @@
     <ClCompile Include="src\MmError.cpp" />
     <ClCompile Include="src\MmLog.cpp" />
     <ClCompile Include="src\MmThread.cpp" />
+	<ClCompile Include="src\MmCaptureCameraThread.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\MmCaptureCameraThread.h" />
     <ClInclude Include="include\MmError.h" />
     <ClInclude Include="include\MmLog.h" />
     <ClInclude Include="include\Mmsingle.h" />
     <ClInclude Include="include\MmThread.h" />
     <ClInclude Include="include\MmTypedef.h" />
     <ClInclude Include="include\Mmmutex.h" />
+
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CF8BC6B0-2F46-413E-952C-E6FA906BCF83}</ProjectGuid>
@@ -53,6 +56,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)$(ProjectName)\lib\</OutDir>
+    <IncludePath>$(SolutionDir)thirdparty\opencv\include;$(SolutionDir)thirdparty\opencv\include\opencv;$(SolutionDir)thirdparty\opencv\include\opencv2;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)thirdparty\opencv\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
